@@ -138,9 +138,9 @@ relative to noisy hardware — not a hardware claim.
 
 ```text
 config/                     Central YAML configuration and experiment registry
-data/                       Dataset download, processed arrays, splits and metadata
+data/                       Dataset download, metadata and split rules
 docs/                       Methodology, experiments, results, limitations and paper
-models/                     Trained model binaries and metadata
+models/                     Model metadata (trained binaries are regenerated)
 notebooks/                  Six guided analysis notebooks
 presentation_assets/        Talk outline, key numbers and presentation figures
 results/
@@ -150,7 +150,7 @@ results/
   predictions/              Per-sample test scores
   circuits/                 QSVM/VQC circuit diagrams and resource JSON
   explainability/           Permutation, SHAP, PCA and quantum sensitivity outputs
-  logs/                     Per-run logs
+  logs/                     Local per-run logs (ignored by Git)
 src/
   data/                     Loading, cleaning, splitting and leakage validation
   features/                 Scaling, PCA, mutual information and reduction
@@ -284,8 +284,10 @@ Full details: [docs/methodology.md](docs/methodology.md),
 ## Reproducibility
 
 - Seed **42**; deterministic split and model initialisation where the libraries allow it.
-- Saved artifacts: `data/processed/preprocessor.joblib`, `reducer.joblib`, `scaler.joblib`,
-  `models/*.joblib|*.pt`, `models/*_meta.json`, `results/run_manifest.json`.
+- Generated artifacts (not committed; rebuilt by the pipeline):
+  `data/processed/preprocessor.joblib`, `reducer.joblib`, `scaler.joblib`,
+  `models/*.joblib|*.pt`, plus the committed `models/*_meta.json` and
+  `results/run_manifest.json`.
 - Environment capture: `results/environment.json`.
 - Package versions are logged at the start of every run and in
   [results/final_summary.md](results/final_summary.md).
