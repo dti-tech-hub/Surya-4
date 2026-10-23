@@ -1,0 +1,83 @@
+{
+  "threshold": 0.35,
+  "n_samples": 1800,
+  "n_positive": 838,
+  "n_negative": 962,
+  "accuracy": 0.9244444444444444,
+  "precision": 0.8774193548387097,
+  "recall": 0.9737470167064439,
+  "f1": 0.9230769230769231,
+  "specificity": 0.8814968814968815,
+  "sensitivity": 0.9737470167064439,
+  "fpr": 0.11850311850311851,
+  "fnr": 0.026252983293556086,
+  "npv": 0.9747126436781609,
+  "ppv": 0.8774193548387097,
+  "balanced_accuracy": 0.9276219491016627,
+  "mcc": 0.8536865304052529,
+  "roc_auc": 0.9903008846922928,
+  "average_precision": 0.9897944377022875,
+  "brier_score": 0.04187071386821376,
+  "log_loss": 0.13984142723531942,
+  "tn": 848,
+  "fp": 114,
+  "fn": 22,
+  "tp": 816,
+  "confusion_matrix": [
+    [
+      848,
+      114
+    ],
+    [
+      22,
+      816
+    ]
+  ],
+  "model": "qsvm",
+  "encoding": "angle",
+  "feature_method": "pca",
+  "n_features": 8,
+  "inference_time_s": 4.939282000006642,
+  "inference_ms_per_sample": 2.744045555559246,
+  "throughput_samples_per_s": 364.4254367330271,
+  "per_category": [
+    {
+      "category": "DoS",
+      "n_samples": 678,
+      "attack_rate_in_group": 1.0,
+      "detection_rate": 0.9823008849557522,
+      "false_positive_rate": null,
+      "roc_auc": null
+    },
+    {
+      "category": "Normal",
+      "n_samples": 962,
+      "attack_rate_in_group": 0.0,
+      "detection_rate": null,
+      "false_positive_rate": 0.11850311850311851,
+      "roc_auc": null
+    },
+    {
+      "category": "Probe",
+      "n_samples": 141,
+      "attack_rate_in_group": 1.0,
+      "detection_rate": 0.9716312056737588,
+      "false_positive_rate": null,
+      "roc_auc": null
+    },
+    {
+      "category": "R2L",
+      "n_samples": 19,
+      "attack_rate_in_group": 1.0,
+      "detection_rate": 0.6842105263157895,
+      "false_positive_rate": null,
+      "roc_auc": null
+    }
+  ],
+  "train_size": 600,
+  "val_size": 200,
+  "evaluation_set": "common_test",
+  "mode": "quick",
+  "duration_s": 60.56822439999087,
+  "model_path": "B:\\surya-4\\models\\qsvm.joblib"
+}

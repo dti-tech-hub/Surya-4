@@ -1,0 +1,47 @@
+{
+  "split": {
+    "seed": 42,
+    "fractions": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "sizes": {
+      "train": 8399,
+      "validation": 1801,
+      "test": 1800
+    },
+    "overlap": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "stratified_on": "is_attack",
+    "leakage_guard": "test indices are only materialised at final evaluation"
+  },
+  "integrity": {
+    "overlaps": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "union_size": 12000,
+    "expected_total": 12000,
+    "sizes": {
+      "train": 8399,
+      "validation": 1801,
+      "test": 1800
+    },
+    "passed": true
+  },
+  "pool_fingerprint": {
+    "rows": 12000,
+    "columns": 45,
+    "sha256": "1f50b50c7092dff5d07e7e9c5f08b6184c8e04924e2449c6f4c055eb5d946589"
+  },
+  "external_fingerprint": {
+    "rows": 22544,
+    "columns": 45,
+    "sha256": "899697b6440d4696ee7ae37fc038f48e514808c8e31e6914c3eb32c6619b605b"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "encoding": {
+    "method": "angle",
+    "n_features": 8,
+    "map_name": "zz",
+    "reps": 2,
+    "entanglement": "linear",
+    "num_qubits": 8,
+    "padded_dimension": 256,
+    "padding": 0,
+    "name": "angle-8f"
+  },
+  "resources": {
+    "num_qubits": 8,
+    "depth": 31,
+    "size": 74,
+    "num_parameters": 8,
+    "gate_counts": {
+      "p": 30,
+      "cx": 28,
+      "h": 16
+    },
+    "num_two_qubit_gates": 28,
+    "num_gates_total": 74,
+    "decomposed": {
+      "depth": 31,
+      "size": 74,
+      "num_gates_total": 74,
+      "num_two_qubit_gates": 28,
+      "gate_counts": {
+        "u": 46,
+        "cx": 28
+      }
+    },
+    "model": "QSVM",
+    "encoding": "angle",
+    "feature_map": "zz",
+    "classical_svm": "sklearn.svm.SVC(kernel='precomputed')",
+    "C": 1.0,
+    "shots": null,
+    "backend": "qiskit.quantum_info.Statevector (exact fidelity kernel)",
+    "kernel_calls_training": 600
+  },
+  "timings": {
+    "state_preparation_time_s": 1.6916310000233352,
+    "gram_matrix_time_s": 0.015140900039114058,
+    "svm_fit_time_s": 0.015122300013899803,
+    "training_time_s": 1.721894200076349,
+    "test_state_preparation_time_s": 0.4623460999573581,
+    "test_kernel_time_s": 0.004072700045071542,
+    "prediction_time_s": 0.000639100035186857
+  },
+  "kernel_diagnostics": {
+    "shape": [
+      600,
+      600
+    ],
+    "min": 1.0228733284074448e-09,
+    "max": 0.9999999999999969,
+    "mean": 0.07108447472738373,
+    "diagonal_mean": 0.9999999999999943,
+    "diagonal_min": 0.9999999999999916,
+    "off_diagonal_mean": 0.06953369755664482
+  },
+  "validation": {
+    "performed": true,
+    "n_samples": 16,
+    "max_abs_difference": 0.0017105808392118838,
+    "shot_noise_sigma": 0.0015811388300841897,
+    "tolerance": 0.006324555320336759,
+    "passed": true,
+    "validation_shots": 100000,
+    "exact_kernel_diagonal_max_deviation": 6.661338147750939e-15,
+    "method": "FidelityQuantumKernel + ComputeUncompute(StatevectorSampler, 100000 shots) vs exact statevector overlap",
+    "note": "The circuit-based reference is finite-shot; the production kernel used for all reported results is the exact statevector overlap."
+  },
+  "serialization_note": "The fitted sklearn SVC, quantum kernel training states and feature-map configuration are stored together so the kernel can be recomputed deterministically at inference."
+}

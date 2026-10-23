@@ -1,0 +1,76 @@
+{
+  "selected_method": "pca",
+  "selected_n_features": 8,
+  "validation_best_all": {
+    "method": "pca",
+    "n_features": 16,
+    "accuracy": 0.9355913381454747,
+    "f1": 0.9295261239368166,
+    "roc_auc": 0.9776503914527246,
+    "status": "ok",
+    "explained_variance": 0.8813098966829968
+  },
+  "validation_best_feasible": {
+    "method": "pca",
+    "n_features": 8,
+    "accuracy": 0.9228206551915602,
+    "f1": 0.9161134580567291,
+    "roc_auc": 0.9735066183887365,
+    "status": "ok",
+    "explained_variance": 0.6665562310996888
+  },
+  "ablation": [
+    {
+      "method": "pca",
+      "n_features": 8,
+      "accuracy": 0.9228206551915602,
+      "f1": 0.9161134580567291,
+      "roc_auc": 0.9735066183887365,
+      "status": "ok",
+      "explained_variance": 0.6665562310996888
+    },
+    {
+      "method": "pca",
+      "n_features": 12,
+      "accuracy": 0.9311493614658523,
+      "f1": 0.9252110977080821,
+      "roc_auc": 0.9785277213956981,
+      "status": "ok",
+      "explained_variance": 0.7808760288707273
+    },
+    {
+      "method": "pca",
+      "n_features": 16,
+      "accuracy": 0.9355913381454747,
+      "f1": 0.9295261239368166,
+      "roc_auc": 0.9776503914527246,
+      "status": "ok",
+      "explained_variance": 0.8813098966829968
+    },
+    {
+      "method": "mutual_info",
+      "n_features": 8,
+      "accuracy": 0.8850638534147696,
+      "f1": 0.8715083798882681,
+      "roc_auc": 0.9556514670493212,
+      "status": "ok"
+    },
+    {
+      "method": "mutual_info",
+      "n_features": 12,
+      "accuracy": 0.883953359244864,
+      "f1": 0.8734100545124167,
+      "roc_auc": 0.9672785671268931,
+      "status": "ok"
+    },
+    {
+      "method": "mutual_info",
+      "n_features": 16,
+      "accuracy": 0.9211549139367018,
+      "f1": 0.91320293398533,
+      "roc_auc": 0.97756241062511,
+      "status": "ok"
+    }
+  ],
+  "policy": "Configuration chosen on validation F1 only, restricted to n_features <= max_quantum_qubits for simulator feasibility. The test split was not consulted."
+}

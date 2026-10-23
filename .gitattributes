@@ -1,0 +1,14 @@
+# Normalise text files to LF in the repository; keep binary artifacts binary.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.joblib binary
+*.pkl binary
+*.pt binary
+*.npz binary
+*.npy binary
+*.parquet binary

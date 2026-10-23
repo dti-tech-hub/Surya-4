@@ -1,0 +1,32 @@
+[
+  {
+    "model": "qsvm",
+    "model_label": "QSVM",
+    "encoding": "angle",
+    "qubits": 8,
+    "circuit_depth": 31,
+    "circuit_size": 74,
+    "num_parameters": 8,
+    "num_two_qubit_gates": 28,
+    "optimizer": "-",
+    "shots": null,
+    "backend": "qiskit.quantum_info.Statevector (exact fidelity kernel)",
+    "quantum_training_time_s": 1.721894200076349,
+    "quantum_inference_ms_per_sample": 3.942799987271428
+  },
+  {
+    "model": "vqc",
+    "model_label": "VQC",
+    "encoding": "angle",
+    "qubits": 8,
+    "circuit_depth": 38,
+    "circuit_size": 112,
+    "num_parameters": 24,
+    "num_two_qubit_gates": 42,
+    "optimizer": "COBYLA",
+    "shots": 1024.0,
+    "backend": "qiskit.quantum_info.Statevector (analytic probabilities)",
+    "quantum_training_time_s": 8.611228900030255,
+    "quantum_inference_ms_per_sample": 32.729500031564385
+  }
+]

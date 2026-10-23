@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment secrets
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Raw dataset (downloaded; not redistributed here)
+data/raw/*
+!data/raw/.gitkeep
+
+# Large/generated intermediate artefacts (regenerate with the pipeline)
+data/processed/*.npz
+data/processed/*.parquet
+data/processed/*.joblib
+data/processed/reducers/
+data/splits/*.parquet
+models/*.pt
+models/*.joblib
+models/*.pkl
+
+# Logs and transient run output
+results/logs/
+*.log
+
+# Keep report tables, figures, metrics, docs and metadata in version control.
+!results/logs/.gitkeep

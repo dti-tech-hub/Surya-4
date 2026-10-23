@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-10-21T07:52:42+00:00",
+  "python": {
+    "version": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+    "version_info": [
+      3,
+      14,
+      5
+    ],
+    "executable": "C:\\Python314\\python.exe",
+    "implementation": "CPython"
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+    "hostname": "siva"
+  },
+  "cpu_count_logical": 12,
+  "ram_gb": 15.72,
+  "gpu": {
+    "available": false,
+    "devices": []
+  },
+  "packages": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.8",
+    "seaborn": "0.13.2",
+    "torch": "2.14.1",
+    "torchvision": "0.29.1",
+    "qiskit": "2.6.0",
+    "qiskit-aer": "0.18.0",
+    "qiskit-machine-learning": "0.9.1",
+    "shap": "0.53.0",
+    "streamlit": "1.65.0",
+    "pyarrow": "25.0.1",
+    "joblib": "1.5.3",
+    "pytest": "9.1.1",
+    "PyYAML": "6.0.3",
+    "tabulate": "0.10.0"
+  },
+  "quantum_simulation": {
+    "backend": "qiskit.quantum_info.Statevector (analytic)",
+    "note": "No quantum hardware was used. All quantum results are simulation-based and shot-noise free unless finite_shot_evaluation is enabled."
+  },
+  "environment_variables": {
+    "PYTHONHASHSEED": "42",
+    "OMP_NUM_THREADS": "1"
+  }
+}

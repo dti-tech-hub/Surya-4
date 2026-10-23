@@ -1,0 +1,164 @@
+{
+  "n_samples": 1800,
+  "level_counts": {
+    "NORMAL": 920,
+    "MONITOR": 67,
+    "ALERT": 33,
+    "QUARANTINE": 36,
+    "ESCALATE": 744
+  },
+  "level_fractions": {
+    "NORMAL": 0.5111111111111111,
+    "MONITOR": 0.03722222222222222,
+    "ALERT": 0.018333333333333333,
+    "QUARANTINE": 0.02,
+    "ESCALATE": 0.41333333333333333
+  },
+  "action_counts": {
+    "BLOCK_AND_ESCALATE": 744,
+    "ALLOW": 920,
+    "LOG_AND_MONITOR": 67,
+    "QUARANTINE_HOST": 36,
+    "NOTIFY_ANALYST": 33
+  },
+  "policy": {
+    "normal_max": 0.2,
+    "monitor_max": 0.45,
+    "alert_max": 0.7,
+    "quarantine_max": 0.9,
+    "severity_bump_categories": [
+      "U2R",
+      "R2L"
+    ],
+    "severity_bump": 1,
+    "actions": {
+      "NORMAL": "ALLOW",
+      "MONITOR": "LOG_AND_MONITOR",
+      "ALERT": "NOTIFY_ANALYST",
+      "QUARANTINE": "QUARANTINE_HOST",
+      "ESCALATE": "BLOCK_AND_ESCALATE"
+    }
+  },
+  "examples": [
+    {
+      "predicted_label": 1,
+      "predicted_class": "ATTACK",
+      "probability": 0.99976045,
+      "confidence": 0.99976045,
+      "attack_category": "DoS",
+      "risk_score": 99.98,
+      "risk_level": "ESCALATE",
+      "action": "BLOCK_AND_ESCALATE",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.9998; base_tier=ESCALATE; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    },
+    {
+      "predicted_label": 0,
+      "predicted_class": "NORMAL",
+      "probability": 0.019150535,
+      "confidence": 0.980849465,
+      "attack_category": "Normal",
+      "risk_score": 1.92,
+      "risk_level": "NORMAL",
+      "action": "ALLOW",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.0192; base_tier=NORMAL; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    },
+    {
+      "predicted_label": 1,
+      "predicted_class": "ATTACK",
+      "probability": 0.9997713,
+      "confidence": 0.9997713,
+      "attack_category": "DoS",
+      "risk_score": 99.98,
+      "risk_level": "ESCALATE",
+      "action": "BLOCK_AND_ESCALATE",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.9998; base_tier=ESCALATE; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    },
+    {
+      "predicted_label": 0,
+      "predicted_class": "NORMAL",
+      "probability": 0.013300519,
+      "confidence": 0.986699481,
+      "attack_category": "Normal",
+      "risk_score": 1.33,
+      "risk_level": "NORMAL",
+      "action": "ALLOW",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.0133; base_tier=NORMAL; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    },
+    {
+      "predicted_label": 0,
+      "predicted_class": "NORMAL",
+      "probability": 0.008045071,
+      "confidence": 0.991954929,
+      "attack_category": "Normal",
+      "risk_score": 0.8,
+      "risk_level": "NORMAL",
+      "action": "ALLOW",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.0080; base_tier=NORMAL; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    },
+    {
+      "predicted_label": 1,
+      "predicted_class": "ATTACK",
+      "probability": 0.9998777,
+      "confidence": 0.9998777,
+      "attack_category": "DoS",
+      "risk_score": 99.99,
+      "risk_level": "ESCALATE",
+      "action": "BLOCK_AND_ESCALATE",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.9999; base_tier=ESCALATE; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    },
+    {
+      "predicted_label": 1,
+      "predicted_class": "ATTACK",
+      "probability": 0.9999062,
+      "confidence": 0.9999062,
+      "attack_category": "DoS",
+      "risk_score": 99.99,
+      "risk_level": "ESCALATE",
+      "action": "BLOCK_AND_ESCALATE",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.9999; base_tier=ESCALATE; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    },
+    {
+      "predicted_label": 1,
+      "predicted_class": "ATTACK",
+      "probability": 0.99990535,
+      "confidence": 0.99990535,
+      "attack_category": "DoS",
+      "risk_score": 99.99,
+      "risk_level": "ESCALATE",
+      "action": "BLOCK_AND_ESCALATE",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.9999; base_tier=ESCALATE; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    },
+    {
+      "predicted_label": 0,
+      "predicted_class": "NORMAL",
+      "probability": 0.19234587,
+      "confidence": 0.80765413,
+      "attack_category": "Normal",
+      "risk_score": 19.23,
+      "risk_level": "NORMAL",
+      "action": "ALLOW",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.1923; base_tier=NORMAL; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    },
+    {
+      "predicted_label": 1,
+      "predicted_class": "ATTACK",
+      "probability": 0.99990416,
+      "confidence": 0.99990416,
+      "attack_category": "DoS",
+      "risk_score": 99.99,
+      "risk_level": "ESCALATE",
+      "action": "BLOCK_AND_ESCALATE",
+      "severity_bumped": false,
+      "rationale": "p(attack)=0.9999; base_tier=ESCALATE; assistive triage only \u2014 no automatic blocking below ESCALATE"
+    }
+  ]
+}

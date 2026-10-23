@@ -1,0 +1,29 @@
+# Core runtime dependencies, pinned to the versions used for the reported results.
+# Tested with Python 3.14.5 on Windows 11 (CPU only).
+#
+# Install:
+#   python -m venv .venv
+#   .venv\Scripts\activate
+#   pip install -r requirements.txt
+#
+# For the notebooks only (optional):
+#   pip install jupyterlab nbformat ipykernel
+
+numpy==2.4.4
+scipy==1.17.1
+pandas==3.0.1
+scikit-learn==1.8.0
+matplotlib==3.10.8
+seaborn==0.13.2
+torch==2.14.1
+torchvision==0.29.1
+qiskit==2.6.0
+qiskit-aer==0.18.0
+qiskit-machine-learning==0.9.1
+shap==0.53.0
+streamlit==1.65.0
+pyarrow==25.0.1
+joblib==1.5.3
+pytest==9.1.1
+PyYAML==6.0.3
+tabulate==0.10.0

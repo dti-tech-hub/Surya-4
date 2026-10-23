@@ -1,0 +1,37 @@
+{
+  "type": "FeatureScaler",
+  "feature_range": [
+    0.0,
+    3.141592653589793
+  ],
+  "lower_percentile": 1.0,
+  "upper_percentile": 99.0,
+  "n_features_in": 8,
+  "lo": [
+    -4.227400751113891,
+    -1.6235236740112304,
+    -0.2990146601200104,
+    -1.5594430828094483,
+    -2.891167697906494,
+    -2.0557065534591676,
+    -2.6745710611343383,
+    -3.5110661077499388
+  ],
+  "hi": [
+    3.264919424057007,
+    7.477809381484989,
+    0.34371471583844615,
+    5.007782936096191,
+    4.069205608367924,
+    6.23348017692566,
+    3.910517430305484,
+    1.8026061415672328
+  ],
+  "clipped_values_last_transform": {
+    "below": 134,
+    "above": 163,
+    "total_values": 14400
+  },
+  "leakage_policy": "fit on training split only",
+  "rationale": "angle / ZZ feature maps require bounded rotation angles"
+}

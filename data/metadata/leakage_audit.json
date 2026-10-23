@@ -1,0 +1,194 @@
+{
+  "checks": [
+    {
+      "check": "scaler_fit_on_train",
+      "max_abs_difference": 0.0,
+      "passed": true
+    },
+    {
+      "check": "onehot_vocabulary_from_train",
+      "unseen_test_levels": [],
+      "passed": true
+    },
+    {
+      "check": "transform_is_stateless",
+      "raw_dimension": 111,
+      "passed": true
+    },
+    {
+      "check": "reducer_input_dimension",
+      "expected": 111,
+      "reported": 111,
+      "passed": true
+    },
+    {
+      "check": "reducer_output_dimension",
+      "expected": 8,
+      "reported": 8,
+      "passed": true
+    },
+    {
+      "check": "no_exact_train_test_row_overlap",
+      "overlapping_rows": 0,
+      "passed": true,
+      "note": "Exact duplicate rows across splits would indicate leakage."
+    },
+    {
+      "check": "reduced_shapes",
+      "train": [
+        8399,
+        8
+      ],
+      "validation": [
+        1801,
+        8
+      ],
+      "test": [
+        1800,
+        8
+      ],
+      "passed": true
+    },
+    {
+      "check": "pca_explained_variance_monotone",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "policy": "All preprocessing statistics (imputation, one-hot vocabulary, scaling, PCA loadings / MI ranking, quantum angle rescaling) are estimated on the training split only. Validation is used for early stopping, threshold selection and configuration selection. The test split is used exactly once, for final reporting.",
+  "design_matrices": [
+    {
+      "name": "X_train",
+      "shape": [
+        8399,
+        8
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 3.1415927410125732,
+      "mean": 1.2150776386260986,
+      "std": 0.8013404607772827,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "name": "X_val",
+      "shape": [
+        1801,
+        8
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 3.1415927410125732,
+      "mean": 1.2241239547729492,
+      "std": 0.8001611828804016,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "name": "X_test",
+      "shape": [
+        1800,
+        8
+      ],
+      "dtype": "float32",
+      "min": 0.0,
+      "max": 3.1415927410125732,
+      "mean": 1.2260147333145142,
+      "std": 0.8010823130607605,
+      "issues": [],
+      "passed": true
+    }
+  ],
+  "feature_selection": {
+    "selected_method": "pca",
+    "selected_n_features": 8,
+    "validation_best_all": {
+      "method": "pca",
+      "n_features": 16,
+      "accuracy": 0.9355913381454747,
+      "f1": 0.9295261239368166,
+      "roc_auc": 0.9776503914527246,
+      "status": "ok",
+      "explained_variance": 0.8813098966829968
+    },
+    "validation_best_feasible": {
+      "method": "pca",
+      "n_features": 8,
+      "accuracy": 0.9228206551915602,
+      "f1": 0.9161134580567291,
+      "roc_auc": 0.9735066183887365,
+      "status": "ok",
+      "explained_variance": 0.6665562310996888
+    },
+    "ablation": [
+      {
+        "method": "pca",
+        "n_features": 8,
+        "accuracy": 0.9228206551915602,
+        "f1": 0.9161134580567291,
+        "roc_auc": 0.9735066183887365,
+        "status": "ok",
+        "explained_variance": 0.6665562310996888
+      },
+      {
+        "method": "pca",
+        "n_features": 12,
+        "accuracy": 0.9311493614658523,
+        "f1": 0.9252110977080821,
+        "roc_auc": 0.9785277213956981,
+        "status": "ok",
+        "explained_variance": 0.7808760288707273
+      },
+      {
+        "method": "pca",
+        "n_features": 16,
+        "accuracy": 0.9355913381454747,
+        "f1": 0.9295261239368166,
+        "roc_auc": 0.9776503914527246,
+        "status": "ok",
+        "explained_variance": 0.8813098966829968
+      },
+      {
+        "method": "mutual_info",
+        "n_features": 8,
+        "accuracy": 0.8850638534147696,
+        "f1": 0.8715083798882681,
+        "roc_auc": 0.9556514670493212,
+        "status": "ok"
+      },
+      {
+        "method": "mutual_info",
+        "n_features": 12,
+        "accuracy": 0.883953359244864,
+        "f1": 0.8734100545124167,
+        "roc_auc": 0.9672785671268931,
+        "status": "ok"
+      },
+      {
+        "method": "mutual_info",
+        "n_features": 16,
+        "accuracy": 0.9211549139367018,
+        "f1": 0.91320293398533,
+        "roc_auc": 0.97756241062511,
+        "status": "ok"
+      }
+    ],
+    "policy": "Configuration chosen on validation F1 only, restricted to n_features <= max_quantum_qubits for simulator feasibility. The test split was not consulted."
+  },
+  "split_integrity": {
+    "overlaps": {
+      "train_validation": 0,
+      "train_test": 0,
+      "validation_test": 0
+    },
+    "union_size": 12000,
+    "expected_total": 12000,
+    "sizes": {
+      "train": 8399,
+      "validation": 1801,
+      "test": 1800
+    },
+    "passed": true
+  }
+}

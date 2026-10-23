@@ -1,0 +1,79 @@
+{
+  "threshold": 0.35,
+  "n_samples": 1800,
+  "n_positive": 838,
+  "n_negative": 962,
+  "accuracy": 0.9566666666666667,
+  "precision": 0.9567307692307693,
+  "recall": 0.9498806682577565,
+  "f1": 0.9532934131736527,
+  "specificity": 0.9625779625779626,
+  "sensitivity": 0.9498806682577565,
+  "fpr": 0.037422037422037424,
+  "fnr": 0.050119331742243436,
+  "npv": 0.9566115702479339,
+  "ppv": 0.9567307692307693,
+  "balanced_accuracy": 0.9562293154178596,
+  "mcc": 0.9129003782259213,
+  "roc_auc": 0.9890864795399401,
+  "average_precision": 0.9906721738368911,
+  "brier_score": 0.030778971748417313,
+  "log_loss": 0.11242377061890542,
+  "tn": 926,
+  "fp": 36,
+  "fn": 42,
+  "tp": 796,
+  "confusion_matrix": [
+    [
+      926,
+      36
+    ],
+    [
+      42,
+      796
+    ]
+  ],
+  "model": "cnn_lstm",
+  "encoding": "none",
+  "feature_method": "pca",
+  "n_features": 8,
+  "inference_time_s": 0.013491699995938689,
+  "inference_ms_per_sample": 0.0074953888866326045,
+  "throughput_samples_per_s": 133415.3591127761,
+  "per_category": [
+    {
+      "category": "DoS",
+      "n_samples": 678,
+      "attack_rate_in_group": 1.0,
+      "detection_rate": 0.9690265486725663,
+      "false_positive_rate": null,
+      "roc_auc": null
+    },
+    {
+      "category": "Normal",
+      "n_samples": 962,
+      "attack_rate_in_group": 0.0,
+      "detection_rate": null,
+      "false_positive_rate": 0.037422037422037424,
+      "roc_auc": null
+    },
+    {
+      "category": "Probe",
+      "n_samples": 141,
+      "attack_rate_in_group": 1.0,
+      "detection_rate": 0.9645390070921985,
+      "false_positive_rate": null,
+      "roc_auc": null
+    },
+    {
+      "category": "R2L",
+      "n_samples": 19,
+      "attack_rate_in_group": 1.0,
+      "detection_rate": 0.15789473684210525,
+      "false_positive_rate": null,
+      "roc_auc": null
+    }
+  ],
+  "evaluation_set": "full_test",
+  "mode": "quick"
+}

@@ -1,0 +1,37 @@
+{
+  "folds_requested": 3,
+  "folds_completed": 3,
+  "pool_size": 3000,
+  "metrics": [
+    "f1",
+    "accuracy",
+    "roc_auc",
+    "recall",
+    "precision"
+  ],
+  "total_time_s": 181.36232039995957,
+  "fold_details": [
+    {
+      "fold": 1,
+      "n_train": 1760,
+      "n_internal_val": 240,
+      "n_test": 1000,
+      "fold_seconds": 58.18593189999228
+    },
+    {
+      "fold": 2,
+      "n_train": 1760,
+      "n_internal_val": 240,
+      "n_test": 1000,
+      "fold_seconds": 63.14200680004433
+    },
+    {
+      "fold": 3,
+      "n_train": 1760,
+      "n_internal_val": 240,
+      "n_test": 1000,
+      "fold_seconds": 59.97013999999035
+    }
+  ],
+  "leakage_policy": "Preprocessing, feature reduction and quantum rescaling are refit inside every fold on fold-training data only. Early stopping uses an internal validation split carved out of the fold-training data. The held-out fold is used only for scoring."
+}

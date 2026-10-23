@@ -1,0 +1,28 @@
+{
+  "novel_types": [
+    "apache2",
+    "httptunnel",
+    "mailbomb",
+    "mscan",
+    "named",
+    "processtable",
+    "ps",
+    "saint",
+    "sendmail",
+    "snmpgetattack",
+    "snmpguess",
+    "sqlattack",
+    "udpstorm",
+    "worm",
+    "xlock",
+    "xsnoop",
+    "xterm"
+  ],
+  "n_novel_types": 17,
+  "novelty_reference": "full KDDTrain+ label set",
+  "n_samples": 13461,
+  "n_novel_attack_samples": 3750,
+  "n_normal_samples": 9711,
+  "terminology": "external novel attack types + normal (KDDTest+)",
+  "caveat": "KDDTest+ also differs in feature distribution from KDDTrain+, so this measures novel-type generalisation under covariate shift, not an isolated zero-day effect."
+}

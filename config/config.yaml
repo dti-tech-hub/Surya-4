@@ -1,0 +1,230 @@
+# =============================================================================
+# Quantum-Enhanced Intrusion Detection System (QE-IDS)
+# Central experiment configuration.
+#
+# Every scientifically relevant knob lives here. Nothing important is buried
+# inside Python files. CLI overrides are applied with  --set key.path=value
+# =============================================================================
+
+project:
+  name: "Quantum-Enhanced Intrusion Detection System"
+  short_name: "QE-IDS"
+  version: "1.0.0"
+  seed: 42
+  description: >
+    Fair comparison of a classical CNN+LSTM baseline against a Quantum Support
+    Vector Machine (QSVM) and a Variational Quantum Classifier (VQC) for
+    network intrusion detection on dimensionality-reduced NSL-KDD traffic.
+
+paths:
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  data_splits: "data/splits"
+  data_metadata: "data/metadata"
+  models: "models"
+  results: "results"
+  metrics: "results/metrics"
+  figures: "results/figures"
+  tables: "results/tables"
+  predictions: "results/predictions"
+  logs: "results/logs"
+  circuits: "results/circuits"
+  docs: "docs"
+  presentation: "presentation_assets"
+
+dataset:
+  name: "nsl-kdd"
+  train_file: "KDDTrain+.txt"
+  test_file: "KDDTest+.txt"
+  # NSL-KDD ships without a header row.
+  has_header: false
+  label_column: "label"
+  drop_columns: ["difficulty"]
+  binary: true
+  # Attack categories defined by the NSL-KDD documentation.
+  attack_categories:
+    DoS: [back, land, neptune, pod, smurf, teardrop, mailbomb, processtable, udpstorm, apache2, worm]
+    Probe: [satan, ipsweep, nmap, portsweep, mscan, saint]
+    R2L: [ftp_write, guess_passwd, imap, multihop, phf, spy, warezclient, warezmaster,
+          xlock, xsnoop, snmpguess, snmpgetattack, httptunnel, sendmail, named]
+    U2R: [buffer_overflow, loadmodule, perl, rootkit, ps, sqlattack, xterm]
+
+split:
+  train_size: 0.70
+  validation_size: 0.15
+  test_size: 0.15
+  stratify: true
+  # The official KDDTest+ file is kept as an external, never-trained-on set.
+  use_official_test_as_external: true
+
+preprocessing:
+  handle_missing: "median"        # median | mean | drop
+  remove_duplicates: false        # scientifically justified only for exact dupes
+  clip_inf: true
+  categorical_encoding: "onehot"
+  scale_numeric: "standard"       # standard | minmax | robust
+  min_category_frequency: 2       # rare one-hot levels collapsed (train-fit only)
+  drop_constant_columns: true
+
+feature_reduction:
+  # Primary method + dimension.  Selection is refined on VALIDATION ONLY.
+  method: "pca"                   # pca | mutual_info
+  n_features: 8
+  # Quantum circuits are kept small on purpose (simulation cost).
+  quantum_method: "pca"
+  quantum_n_features: 8
+  candidate_methods: ["pca", "mutual_info"]
+  candidate_features: [8, 12, 16]
+  selection_metric: "f1"
+  # A model must beat the incumbent by this much on validation to justify
+  # a larger quantum circuit.
+  quantum_feasibility_tolerance: 0.01
+  max_quantum_qubits: 8
+
+experiment:
+  mode: "quick"                   # quick | full
+  quick:
+    max_samples: 12000            # stratified subsample of KDDTrain+
+    quantum_train_size: 600
+    quantum_val_size: 200
+    common_test_size: 1800        # every model is scored on this same set
+    cv_folds: 3
+    cv_max_samples: 3000
+    cv_quantum_train_size: 300
+    epochs: 25
+  full:
+    max_samples: null             # use the entire KDDTrain+ pool
+    quantum_train_size: 3000
+    quantum_val_size: 600
+    common_test_size: 2500
+    cv_folds: 5
+    cv_max_samples: 15000
+    cv_quantum_train_size: 800
+    epochs: 40
+
+classical:
+  conv_filters: 32
+  kernel_size: 3
+  pool_size: 2
+  dropout: 0.3
+  lstm_units: 32
+  lstm_layers: 1
+  dense_units: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_size: 256
+  epochs: 25
+  patience: 6
+  min_delta: 0.0005
+  grad_clip: 1.0
+  class_weight: "balanced"        # balanced | none
+  device: "cpu"
+  num_threads: 4
+
+quantum:
+  backend: "statevector_simulator"   # analytic Qiskit Statevector simulation
+  shots: 1024                        # recorded; analytic sim is shot-noise free
+  finite_shot_evaluation: false
+  seed: 42
+
+  qsvm:
+    encoding: "angle"                # angle | amplitude (primary experiment)
+    feature_map: "zz"                # zz | angle
+    feature_map_reps: 2
+    entanglement: "linear"
+    C: 1.0
+    class_weight: "balanced"
+    probability: true                # Platt scaling for calibrated scores
+    validate_against_qiskit: true    # cross-check exact kernel vs ComputeUncompute
+    validation_samples: 16
+    validation_shots: 100000
+
+  vqc:
+    encoding: "angle"
+    feature_map: "zz"
+    feature_map_reps: 2
+    ansatz: "real_amplitudes"
+    ansatz_reps: 2
+    entanglement: "linear"
+    optimizer: "COBYLA"              # COBYLA | SPSA
+    maxiter: 150
+    learning_rate: 0.05              # SPSA only
+    perturbation: 0.1                # SPSA only
+    initial_point_scale: 0.1
+    l2: 0.0001
+
+encoding_experiment:
+  encodings: ["angle", "amplitude"]
+  models: ["qsvm", "vqc"]
+  # Equal optimizer budget for both encodings, matching the primary VQC run so
+  # that the angle row reproduces the main-experiment model.
+  maxiter: 150
+
+cv:
+  enabled: true
+  folds: 5
+  shuffle: true
+  # Preprocessing (scaler / PCA / MI / quantum re-scaling) is refit inside
+  # every fold on the fold-training data only.
+
+evaluation:
+  threshold: 0.5
+  thresholds: [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5,
+               0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95]
+  optimize_threshold: true
+  threshold_objective: "f1"        # f1 | cost
+  # Cost-sensitive objective: missing an attack is this many times worse
+  # than a false alarm.
+  false_negative_cost: 10.0
+  false_positive_cost: 1.0
+  bootstrap_samples: 1000
+  alpha: 0.05
+  cv_folds: 5
+
+zero_day:
+  enabled: true
+  # Entire attack *categories* are removed from training.
+  holdout_categories: ["R2L", "U2R"]
+  normal_ratio_in_test: 1.0        # normal samples per held-out attack sample
+  also_evaluate_official_novel_attacks: true
+
+drift:
+  enabled: true
+  noise_levels: [0.0, 0.1, 0.25, 0.5, 1.0]
+  permutation_fractions: [0.0, 0.1, 0.25, 0.5]
+  windows: 5
+
+latency:
+  enabled: true
+  repeats: 5
+  batch_size: 256
+
+alerting:
+  # Probability bands.  Deliberately conservative: the engine supports the
+  # analyst, it does not auto-block everything.
+  normal_max: 0.20                 # p_attack < 0.20  -> NORMAL
+  monitor_max: 0.45                # 0.20 - 0.45      -> MONITOR
+  alert_max: 0.70                  # 0.45 - 0.70      -> ALERT
+  quarantine_max: 0.90             # 0.70 - 0.90      -> QUARANTINE
+  # >= 0.90                            -> ESCALATE
+  severity_bump_categories: ["U2R", "R2L"]
+  severity_bump: 1
+  actions:
+    NORMAL: "ALLOW"
+    MONITOR: "LOG_AND_MONITOR"
+    ALERT: "NOTIFY_ANALYST"
+    QUARANTINE: "QUARANTINE_HOST"
+    ESCALATE: "BLOCK_AND_ESCALATE"
+
+explainability:
+  permutation_repeats: 10
+  permutation_max_samples: 500
+  shap_enabled: true
+  shap_background: 50
+  shap_samples: 100
+  quantum_sensitivity_samples: 100
+
+logging:
+  level: "INFO"
+  console: true
+  # One file per run is created automatically under results/logs/.

@@ -1,0 +1,108 @@
+{
+  "pool": {
+    "rows": 12000,
+    "labels": {
+      "normal": 6415,
+      "neptune": 4005,
+      "satan": 339,
+      "ipsweep": 307,
+      "smurf": 257,
+      "portsweep": 250,
+      "nmap": 121,
+      "back": 96,
+      "teardrop": 93,
+      "warezclient": 88,
+      "pod": 14,
+      "guess_passwd": 5,
+      "buffer_overflow": 3,
+      "loadmodule": 2,
+      "warezmaster": 2,
+      "rootkit": 1,
+      "multihop": 1,
+      "imap": 1
+    }
+  },
+  "train": {
+    "rows": 8399,
+    "labels": {
+      "normal": 4490,
+      "neptune": 2822,
+      "satan": 249,
+      "ipsweep": 215,
+      "portsweep": 171,
+      "smurf": 165,
+      "nmap": 82,
+      "teardrop": 67,
+      "back": 61,
+      "warezclient": 55,
+      "pod": 10,
+      "guess_passwd": 3,
+      "buffer_overflow": 3,
+      "warezmaster": 2,
+      "rootkit": 1,
+      "multihop": 1,
+      "imap": 1,
+      "loadmodule": 1
+    },
+    "attack_rate": 0.4654125491129896
+  },
+  "validation": {
+    "rows": 1801,
+    "labels": {
+      "normal": 963,
+      "neptune": 578,
+      "smurf": 50,
+      "satan": 49,
+      "ipsweep": 42,
+      "portsweep": 40,
+      "nmap": 28,
+      "back": 19,
+      "warezclient": 15,
+      "teardrop": 14,
+      "guess_passwd": 1,
+      "pod": 1,
+      "loadmodule": 1
+    },
+    "attack_rate": 0.4652970571904497
+  },
+  "test": {
+    "rows": 1800,
+    "labels": {
+      "normal": 962,
+      "neptune": 605,
+      "ipsweep": 50,
+      "smurf": 42,
+      "satan": 41,
+      "portsweep": 39,
+      "warezclient": 18,
+      "back": 16,
+      "teardrop": 12,
+      "nmap": 11,
+      "pod": 3,
+      "guess_passwd": 1
+    },
+    "attack_rate": 0.46555555555555556
+  },
+  "category_counts": {
+    "train": {
+      "Normal": 4490,
+      "DoS": 3125,
+      "Probe": 717,
+      "R2L": 62,
+      "U2R": 5
+    },
+    "validation": {
+      "Normal": 963,
+      "DoS": 662,
+      "Probe": 159,
+      "R2L": 16,
+      "U2R": 1
+    },
+    "test": {
+      "Normal": 962,
+      "DoS": 678,
+      "Probe": 141,
+      "R2L": 19
+    }
+  }
+}

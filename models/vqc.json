@@ -1,0 +1,97 @@
+{
+  "encoding": {
+    "method": "angle",
+    "n_features": 8,
+    "map_name": "zz",
+    "reps": 2,
+    "entanglement": "linear",
+    "num_qubits": 8,
+    "padded_dimension": 256,
+    "padding": 0,
+    "name": "angle-8f"
+  },
+  "resources": {
+    "num_qubits": 8,
+    "depth": 38,
+    "size": 112,
+    "num_parameters": 24,
+    "gate_counts": {
+      "cx": 42,
+      "p": 30,
+      "ry": 24,
+      "h": 16
+    },
+    "num_two_qubit_gates": 42,
+    "num_gates_total": 112,
+    "decomposed": {
+      "depth": 38,
+      "size": 112,
+      "num_gates_total": 112,
+      "num_two_qubit_gates": 42,
+      "gate_counts": {
+        "u": 70,
+        "cx": 42
+      }
+    },
+    "model": "VQC",
+    "encoding": "angle",
+    "feature_map": "zz",
+    "ansatz": "RealAmplitudes",
+    "ansatz_reps": 2,
+    "ansatz_depth": 12,
+    "num_ansatz_parameters": 24,
+    "optimizer": "COBYLA",
+    "maxiter": 150,
+    "shots": 1024,
+    "backend": "qiskit.quantum_info.Statevector (analytic probabilities)",
+    "measurement": "P(qubit 0 = |1>)",
+    "objective_evaluations": 151
+  },
+  "timings": {
+    "state_preparation_time_s": 1.2037842000136152,
+    "optimization_time_s": 7.40744470001664,
+    "training_time_s": 8.611228900030255,
+    "time_per_objective_evaluation_s": 0.049055925165673114,
+    "inference_time_s": 0.3742562999832444,
+    "inference_time_per_sample_s": 0.001871281499916222,
+    "validation_inference_time_s": 0.7397113000042737
+  },
+  "optimizer_result": {
+    "optimizer": "COBYLA",
+    "maxiter": 150,
+    "num_parameters": 24,
+    "iterations": 150,
+    "objective_evaluations": 151,
+    "final_loss": 0.45845861444835756,
+    "best_evaluation": 150,
+    "converged": false,
+    "message": "",
+    "validation_loss": 0.47344566839082575
+  },
+  "weights": [
+    2.127315489752139,
+    2.1983232293603527,
+    -1.2085298713536208,
+    -0.06724516402955731,
+    -0.49614357833901307,
+    -0.021319895599608285,
+    0.16721202653033354,
+    0.033532488938848234,
+    -0.9266810105224093,
+    -0.8636346132711287,
+    -0.16487667636728207,
+    -0.05226964549935561,
+    -0.2664088531201519,
+    0.10606566948264312,
+    -0.2180405499599119,
+    -0.25845020554278514,
+    0.2394494733847313,
+    -0.5473713381573352,
+    -0.2639778118385597,
+    -0.18247699023266484,
+    -0.11686393821430381,
+    -0.23351372444987684,
+    -0.10228383016391338,
+    0.07054026876313882
+  ]
+}

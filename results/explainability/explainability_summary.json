@@ -1,0 +1,351 @@
+{
+  "permutation_importance": [
+    {
+      "feature": "PC1",
+      "importance_mean": 0.3503206207217172,
+      "importance_std": 0.028000077107360657,
+      "baseline_metric": 0.990461533528912,
+      "metric": "roc_auc_drop",
+      "n_samples": 500,
+      "repeats": 10
+    },
+    {
+      "feature": "PC6",
+      "importance_mean": 0.0400070536558778,
+      "importance_std": 0.0035174007491960996,
+      "baseline_metric": 0.990461533528912,
+      "metric": "roc_auc_drop",
+      "n_samples": 500,
+      "repeats": 10
+    },
+    {
+      "feature": "PC2",
+      "importance_mean": 0.024095448788855202,
+      "importance_std": 0.002909294327001121,
+      "baseline_metric": 0.990461533528912,
+      "metric": "roc_auc_drop",
+      "n_samples": 500,
+      "repeats": 10
+    },
+    {
+      "feature": "PC4",
+      "importance_mean": 0.01363920550185157,
+      "importance_std": 0.0022324659153160594,
+      "baseline_metric": 0.990461533528912,
+      "metric": "roc_auc_drop",
+      "n_samples": 500,
+      "repeats": 10
+    },
+    {
+      "feature": "PC5",
+      "importance_mean": 0.011481428044694496,
+      "importance_std": 0.0019323557883503045,
+      "baseline_metric": 0.990461533528912,
+      "metric": "roc_auc_drop",
+      "n_samples": 500,
+      "repeats": 10
+    },
+    {
+      "feature": "PC3",
+      "importance_mean": 0.006750669295756573,
+      "importance_std": 0.0018764067324615323,
+      "baseline_metric": 0.990461533528912,
+      "metric": "roc_auc_drop",
+      "n_samples": 500,
+      "repeats": 10
+    },
+    {
+      "feature": "PC7",
+      "importance_mean": 0.002646724057775851,
+      "importance_std": 0.0019232114172064855,
+      "baseline_metric": 0.990461533528912,
+      "metric": "roc_auc_drop",
+      "n_samples": 500,
+      "repeats": 10
+    },
+    {
+      "feature": "PC8",
+      "importance_mean": 0.0003174145145000695,
+      "importance_std": 0.0004727147565701549,
+      "baseline_metric": 0.990461533528912,
+      "metric": "roc_auc_drop",
+      "n_samples": 500,
+      "repeats": 10
+    }
+  ],
+  "pca_attribution": [
+    {
+      "original_feature": "dst_host_srv_serror_rate",
+      "attributed_importance": 0.12222644271367226,
+      "normalized_attribution": 0.06363424542505941
+    },
+    {
+      "original_feature": "dst_host_serror_rate",
+      "attributed_importance": 0.12211814530374956,
+      "normalized_attribution": 0.06357786299414744
+    },
+    {
+      "original_feature": "serror_rate",
+      "attributed_importance": 0.12195441590615509,
+      "normalized_attribution": 0.06349262123762975
+    },
+    {
+      "original_feature": "srv_serror_rate",
+      "attributed_importance": 0.12172633979945227,
+      "normalized_attribution": 0.06337387892109585
+    },
+    {
+      "original_feature": "same_srv_rate",
+      "attributed_importance": 0.1214838084016967,
+      "normalized_attribution": 0.06324761080639488
+    },
+    {
+      "original_feature": "dst_host_same_srv_rate",
+      "attributed_importance": 0.11724290559318937,
+      "normalized_attribution": 0.06103968718406899
+    },
+    {
+      "original_feature": "dst_host_srv_count",
+      "attributed_importance": 0.10878713147766539,
+      "normalized_attribution": 0.05663739261196386
+    },
+    {
+      "original_feature": "logged_in",
+      "attributed_importance": 0.09947132624718501,
+      "normalized_attribution": 0.05178734361105214
+    },
+    {
+      "original_feature": "count",
+      "attributed_importance": 0.09003214139378578,
+      "normalized_attribution": 0.04687305998929276
+    },
+    {
+      "original_feature": "dst_host_count",
+      "attributed_importance": 0.08256029514329406,
+      "normalized_attribution": 0.04298302369660669
+    },
+    {
+      "original_feature": "flag_SF",
+      "attributed_importance": 0.05876578562249131,
+      "normalized_attribution": 0.03059498699195749
+    },
+    {
+      "original_feature": "flag_S0",
+      "attributed_importance": 0.05478563752551673,
+      "normalized_attribution": 0.028522819012527026
+    },
+    {
+      "original_feature": "srv_diff_host_rate",
+      "attributed_importance": 0.05401734322350516,
+      "normalized_attribution": 0.02812282513978209
+    },
+    {
+      "original_feature": "dst_host_same_src_port_rate",
+      "attributed_importance": 0.04842310804319486,
+      "normalized_attribution": 0.02521032170332605
+    },
+    {
+      "original_feature": "dst_host_srv_diff_host_rate",
+      "attributed_importance": 0.046422818345213446,
+      "normalized_attribution": 0.024168919182426793
+    },
+    {
+      "original_feature": "diff_srv_rate",
+      "attributed_importance": 0.04522231911637453,
+      "normalized_attribution": 0.02354390825300387
+    },
+    {
+      "original_feature": "dst_host_diff_srv_rate",
+      "attributed_importance": 0.04514831650385545,
+      "normalized_attribution": 0.023505380580083154
+    },
+    {
+      "original_feature": "service_http",
+      "attributed_importance": 0.03956406020191498,
+      "normalized_attribution": 0.020598072405643705
+    },
+    {
+      "original_feature": "rerror_rate",
+      "attributed_importance": 0.033908133012763166,
+      "normalized_attribution": 0.01765345051474993
+    },
+    {
+      "original_feature": "srv_rerror_rate",
+      "attributed_importance": 0.03365648380807091,
+      "normalized_attribution": 0.017522435434077728
+    }
+  ],
+  "shap": {
+    "performed": true,
+    "n_explained": 100,
+    "n_background": 50,
+    "figure": "B:\\surya-4\\results\\explainability\\shap_summary.png",
+    "importance": [
+      {
+        "feature": "PC1",
+        "mean_abs_shap": 0.3555952864757
+      },
+      {
+        "feature": "PC2",
+        "mean_abs_shap": 0.0676879185094082
+      },
+      {
+        "feature": "PC4",
+        "mean_abs_shap": 0.0639675635624632
+      },
+      {
+        "feature": "PC5",
+        "mean_abs_shap": 0.03444733814450332
+      },
+      {
+        "feature": "PC6",
+        "mean_abs_shap": 0.03404509078261043
+      },
+      {
+        "feature": "PC7",
+        "mean_abs_shap": 0.019549887443571237
+      },
+      {
+        "feature": "PC3",
+        "mean_abs_shap": 0.016517523688888373
+      },
+      {
+        "feature": "PC8",
+        "mean_abs_shap": 0.004170761367164495
+      }
+    ]
+  },
+  "qsvm_sensitivity": [
+    {
+      "feature": "PC3",
+      "mean_abs_probability_change": 0.17778839183747125,
+      "std_probability_change": 0.16874346280312955,
+      "max_abs_probability_change": 0.7257822316399867,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC5",
+      "mean_abs_probability_change": 0.16904977652107658,
+      "std_probability_change": 0.13312825258364533,
+      "max_abs_probability_change": 0.8769393601975386,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC2",
+      "mean_abs_probability_change": 0.12248019207536301,
+      "std_probability_change": 0.16795332491558548,
+      "max_abs_probability_change": 0.8506753667231497,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC6",
+      "mean_abs_probability_change": 0.1173486956885862,
+      "std_probability_change": 0.09303316979104712,
+      "max_abs_probability_change": 0.5995218504190729,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC7",
+      "mean_abs_probability_change": 0.07810151411107656,
+      "std_probability_change": 0.11246824798835742,
+      "max_abs_probability_change": 0.536754312104661,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC4",
+      "mean_abs_probability_change": 0.06533891350066122,
+      "std_probability_change": 0.07506447749547834,
+      "max_abs_probability_change": 0.45921168292003955,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC1",
+      "mean_abs_probability_change": 0.06509802359981542,
+      "std_probability_change": 0.09503980710436782,
+      "max_abs_probability_change": 0.6436096442627628,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC8",
+      "mean_abs_probability_change": 0.061462657250049596,
+      "std_probability_change": 0.10186102894353284,
+      "max_abs_probability_change": 0.5706811710231442,
+      "delta": 0.25,
+      "n_samples": 100
+    }
+  ],
+  "vqc_sensitivity": [
+    {
+      "feature": "PC3",
+      "mean_abs_probability_change": 0.20325333865228493,
+      "std_probability_change": 0.14766252849239347,
+      "max_abs_probability_change": 0.4313655217393893,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC2",
+      "mean_abs_probability_change": 0.16096733323723655,
+      "std_probability_change": 0.13655392982236003,
+      "max_abs_probability_change": 0.48329542935392666,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC1",
+      "mean_abs_probability_change": 0.1385913268083617,
+      "std_probability_change": 0.09159493039972667,
+      "max_abs_probability_change": 0.44867454645173527,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC4",
+      "mean_abs_probability_change": 0.025032102997247518,
+      "std_probability_change": 0.027852574258610364,
+      "max_abs_probability_change": 0.1871198865270869,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC5",
+      "mean_abs_probability_change": 0.002235199363601127,
+      "std_probability_change": 0.0027529254569476267,
+      "max_abs_probability_change": 0.011806660681531522,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC6",
+      "mean_abs_probability_change": 1.1421419365831299e-16,
+      "std_probability_change": 1.1335451499286548e-16,
+      "max_abs_probability_change": 4.440892098500626e-16,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC7",
+      "mean_abs_probability_change": 9.992007221626409e-17,
+      "std_probability_change": 1.0275187567694727e-16,
+      "max_abs_probability_change": 4.440892098500626e-16,
+      "delta": 0.25,
+      "n_samples": 100
+    },
+    {
+      "feature": "PC8",
+      "mean_abs_probability_change": 8.271161533457416e-17,
+      "std_probability_change": 9.261632590159062e-17,
+      "max_abs_probability_change": 3.3306690738754696e-16,
+      "delta": 0.25,
+      "n_samples": 100
+    }
+  ],
+  "scope_note": "Permutation importance and PCA attribution are post-hoc, model-agnostic explanations of the classical pipeline. Quantum results are empirical input-sensitivity analyses of the encoded circuit, not Shapley attributions or 'quantum explainability'."
+}

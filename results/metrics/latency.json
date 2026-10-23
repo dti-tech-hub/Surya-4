@@ -1,0 +1,53 @@
+[
+  {
+    "model": "cnn_lstm",
+    "encoding": "none",
+    "n_samples": 1800,
+    "preprocessing_ms_per_sample": 0.00985944443123622,
+    "feature_reduction_ms_per_sample": 0.0008397222457764049,
+    "inference_ms_per_sample": 0.9215999743901193,
+    "batch_inference_ms_per_sample": 0.005436328137875535,
+    "throughput_samples_per_s": 183947.68944002534,
+    "end_to_end_ms_per_sample": 0.932299141067132,
+    "batch_size": 256,
+    "repeats": 5,
+    "quantum_state_prep_ms_per_sample": null,
+    "quantum_kernel_ms_per_sample": null,
+    "quantum_inference_ms_per_sample": null,
+    "slowdown_vs_classical": 1.0
+  },
+  {
+    "model": "qsvm",
+    "encoding": "angle",
+    "n_samples": 1800,
+    "preprocessing_ms_per_sample": 0.00985944443123622,
+    "feature_reduction_ms_per_sample": 0.0008397222457764049,
+    "inference_ms_per_sample": 3.942799987271428,
+    "batch_inference_ms_per_sample": 2.595783984361333,
+    "throughput_samples_per_s": 385.24006852058614,
+    "end_to_end_ms_per_sample": 3.9534991539484405,
+    "batch_size": 256,
+    "repeats": 5,
+    "quantum_state_prep_ms_per_sample": 0.38327088886742583,
+    "quantum_kernel_ms_per_sample": 0.021096222238459934,
+    "quantum_inference_ms_per_sample": null,
+    "slowdown_vs_classical": 4.278211910629259
+  },
+  {
+    "model": "vqc",
+    "encoding": "angle",
+    "n_samples": 1800,
+    "preprocessing_ms_per_sample": 0.00985944443123622,
+    "feature_reduction_ms_per_sample": 0.0008397222457764049,
+    "inference_ms_per_sample": 32.729500031564385,
+    "batch_inference_ms_per_sample": 3.011950390828133,
+    "throughput_samples_per_s": 332.0107804714044,
+    "end_to_end_ms_per_sample": 32.7401991982414,
+    "batch_size": 256,
+    "repeats": 5,
+    "quantum_state_prep_ms_per_sample": null,
+    "quantum_kernel_ms_per_sample": null,
+    "quantum_inference_ms_per_sample": 3.371060937524817,
+    "slowdown_vs_classical": 35.51378140306867
+  }
+]

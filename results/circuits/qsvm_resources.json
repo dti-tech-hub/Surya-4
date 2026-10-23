@@ -1,0 +1,23 @@
+{
+  "num_qubits": 8,
+  "depth": 31,
+  "size": 74,
+  "num_parameters": 8,
+  "gate_counts": {
+    "p": 30,
+    "cx": 28,
+    "h": 16
+  },
+  "num_two_qubit_gates": 28,
+  "num_gates_total": 74,
+  "decomposed": {
+    "depth": 31,
+    "size": 74,
+    "num_gates_total": 74,
+    "num_two_qubit_gates": 28,
+    "gate_counts": {
+      "u": 46,
+      "cx": 28
+    }
+  }
+}

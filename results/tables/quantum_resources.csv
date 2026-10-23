@@ -1,0 +1,3 @@
+model,model_label,encoding,qubits,circuit_depth,circuit_size,num_parameters,num_two_qubit_gates,optimizer,shots,backend,quantum_training_time_s,quantum_inference_ms_per_sample
+qsvm,QSVM,angle,8,31,74,8,28,-,,qiskit.quantum_info.Statevector (exact fidelity kernel),1.721894200076349,3.942799987271428
+vqc,VQC,angle,8,38,112,24,42,COBYLA,1024.0,qiskit.quantum_info.Statevector (analytic probabilities),8.611228900030255,32.729500031564385

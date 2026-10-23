@@ -1,0 +1,57 @@
+{
+  "holdout_categories": [
+    "R2L",
+    "U2R"
+  ],
+  "held_out_counts": {
+    "R2L": 78,
+    "U2R": 6
+  },
+  "test_label_counts": {
+    "normal": 84,
+    "warezclient": 70,
+    "guess_passwd": 4,
+    "buffer_overflow": 3,
+    "loadmodule": 2,
+    "warezmaster": 2,
+    "multihop": 1,
+    "rootkit": 1,
+    "imap": 1
+  },
+  "split_sizes": {
+    "train": 8598,
+    "validation": 1518,
+    "test": 168
+  },
+  "leakage_audit": {
+    "holdout_categories": [
+      "R2L",
+      "U2R"
+    ],
+    "train_categories": [
+      "DoS",
+      "Normal",
+      "Probe"
+    ],
+    "test_categories": [
+      "Normal",
+      "R2L",
+      "U2R"
+    ],
+    "leaked_categories": [],
+    "passed": true
+  },
+  "train_categories": [
+    "DoS",
+    "Normal",
+    "Probe"
+  ],
+  "test_categories": [
+    "Normal",
+    "R2L",
+    "U2R"
+  ],
+  "terminology": "unseen attack-category generalisation (not a zero-day claim)",
+  "feature_method": "pca",
+  "n_features": 8
+}

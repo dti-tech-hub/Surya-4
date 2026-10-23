@@ -1,0 +1,110 @@
+# =============================================================================
+# Experiment matrix.
+#
+# Each entry is (id, name, description, models, requirements).  The orchestrator
+# records which experiments actually completed in results/run_manifest.json and
+# refuses to report numbers for experiments that did not run.
+# =============================================================================
+
+experiments:
+  - id: E1
+    name: "CNN+LSTM baseline"
+    description: "Classical CNN+LSTM on PCA-reduced NSL-KDD features."
+    models: ["cnn_lstm"]
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E2
+    name: "QSVM + angle encoding"
+    description: "Fidelity quantum kernel (ZZ feature map) + soft-margin SVM."
+    models: ["qsvm"]
+    encoding: "angle"
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E3
+    name: "VQC + angle encoding"
+    description: "ZZ feature map + RealAmplitudes ansatz, COBYLA/SPSA."
+    models: ["vqc"]
+    encoding: "angle"
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E4
+    name: "QSVM + amplitude encoding"
+    description: >
+      Amplitude-encoded state preparation.  Requires a power-of-two feature
+      dimension; vectors are L2-normalised and zero-padded.
+    models: ["qsvm"]
+    encoding: "amplitude"
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E5
+    name: "VQC + amplitude encoding"
+    description: "Amplitude state preparation + RealAmplitudes ansatz."
+    models: ["vqc"]
+    encoding: "amplitude"
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E6
+    name: "PCA vs mutual information"
+    description: >
+      Validation-only probe comparison of the two reduction families.
+      The test set is never consulted for selection.
+    models: ["probe"]
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E7
+    name: "8 vs 12 vs 16 features"
+    description: "Reduced-dimension ablation, validation-selected."
+    models: ["probe"]
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E8
+    name: "Unseen attack-category evaluation"
+    description: >
+      R2L and U2R categories removed from the training pool; models retrained
+      and evaluated on Normal + held-out attacks.  Additionally the official
+      KDDTest+ novel attack types are scored as an external test.
+    models: ["cnn_lstm", "qsvm", "vqc"]
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E9
+    name: "Latency analysis"
+    description: "Stage-wise latency and throughput for every model."
+    models: ["cnn_lstm", "qsvm", "vqc"]
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E10
+    name: "Concept drift / distribution shift"
+    description: >
+      Controlled covariate-shift experiment (Gaussian noise + feature
+      permutation) plus simulated ordered windows.  Not production drift
+      detection.
+    models: ["cnn_lstm"]
+    enabled: true
+    quick: true
+    full: true
+
+  - id: E11
+    name: "Statistical significance"
+    description: "McNemar, paired Wilcoxon across folds, bootstrap CIs."
+    models: ["cnn_lstm", "qsvm", "vqc"]
+    enabled: true
+    quick: true
+    full: true

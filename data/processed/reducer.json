@@ -1,0 +1,446 @@
+{
+  "type": "PCAReducer",
+  "n_components": 8,
+  "whiten": false,
+  "n_features_in": 111,
+  "explained_variance_ratio": [
+    0.20867625058666558,
+    0.13938922597424622,
+    0.08644693986768157,
+    0.05591013206169337,
+    0.05399586436631402,
+    0.04972644318082273,
+    0.03912282375185158,
+    0.03328855131041365
+  ],
+  "cumulative_explained_variance": [
+    0.20867625058666558,
+    0.3480654765609118,
+    0.4345124164285934,
+    0.49042254849028677,
+    0.5444184128566008,
+    0.5941448560374235,
+    0.6332676797892751,
+    0.6665562310996888
+  ],
+  "total_explained_variance": 0.6665562310996888,
+  "feature_contributions": {
+    "PC1": [
+      {
+        "feature": "same_srv_rate",
+        "loading": 0.337572002063615,
+        "abs_loading": 0.337572002063615
+      },
+      {
+        "feature": "dst_host_srv_serror_rate",
+        "loading": -0.3237215625362854,
+        "abs_loading": 0.3237215625362854
+      },
+      {
+        "feature": "dst_host_serror_rate",
+        "loading": -0.32321660471279356,
+        "abs_loading": 0.32321660471279356
+      },
+      {
+        "feature": "serror_rate",
+        "loading": -0.3222819236463153,
+        "abs_loading": 0.3222819236463153
+      },
+      {
+        "feature": "srv_serror_rate",
+        "loading": -0.32120302544526863,
+        "abs_loading": 0.32120302544526863
+      },
+      {
+        "feature": "dst_host_same_srv_rate",
+        "loading": 0.31588496026896906,
+        "abs_loading": 0.31588496026896906
+      },
+      {
+        "feature": "dst_host_srv_count",
+        "loading": 0.28246151203507247,
+        "abs_loading": 0.28246151203507247
+      },
+      {
+        "feature": "logged_in",
+        "loading": 0.25335485027068005,
+        "abs_loading": 0.25335485027068005
+      },
+      {
+        "feature": "count",
+        "loading": -0.2327140451128683,
+        "abs_loading": 0.2327140451128683
+      },
+      {
+        "feature": "dst_host_count",
+        "loading": -0.21309879598078468,
+        "abs_loading": 0.21309879598078468
+      }
+    ],
+    "PC2": [
+      {
+        "feature": "srv_rerror_rate",
+        "loading": 0.4240679451683129,
+        "abs_loading": 0.4240679451683129
+      },
+      {
+        "feature": "rerror_rate",
+        "loading": 0.4238407605399529,
+        "abs_loading": 0.4238407605399529
+      },
+      {
+        "feature": "dst_host_srv_rerror_rate",
+        "loading": 0.4225986321000663,
+        "abs_loading": 0.4225986321000663
+      },
+      {
+        "feature": "dst_host_rerror_rate",
+        "loading": 0.4143272845744589,
+        "abs_loading": 0.4143272845744589
+      },
+      {
+        "feature": "dst_host_diff_srv_rate",
+        "loading": 0.23277950325874033,
+        "abs_loading": 0.23277950325874033
+      },
+      {
+        "feature": "srv_serror_rate",
+        "loading": -0.17639936238926768,
+        "abs_loading": 0.17639936238926768
+      },
+      {
+        "feature": "dst_host_srv_serror_rate",
+        "loading": -0.17399612008136273,
+        "abs_loading": 0.17399612008136273
+      },
+      {
+        "feature": "serror_rate",
+        "loading": -0.17326562475216972,
+        "abs_loading": 0.17326562475216972
+      },
+      {
+        "feature": "dst_host_serror_rate",
+        "loading": -0.17293648112714516,
+        "abs_loading": 0.17293648112714516
+      },
+      {
+        "feature": "diff_srv_rate",
+        "loading": 0.1645185744596651,
+        "abs_loading": 0.1645185744596651
+      }
+    ],
+    "PC3": [
+      {
+        "feature": "num_root",
+        "loading": 0.5303874280679916,
+        "abs_loading": 0.5303874280679916
+      },
+      {
+        "feature": "num_compromised",
+        "loading": 0.5257602814943911,
+        "abs_loading": 0.5257602814943911
+      },
+      {
+        "feature": "su_attempted",
+        "loading": 0.5223724327945104,
+        "abs_loading": 0.5223724327945104
+      },
+      {
+        "feature": "root_shell",
+        "loading": 0.35669987426385574,
+        "abs_loading": 0.35669987426385574
+      },
+      {
+        "feature": "num_access_files",
+        "loading": 0.19389425159439574,
+        "abs_loading": 0.19389425159439574
+      },
+      {
+        "feature": "duration",
+        "loading": 0.03866073775956831,
+        "abs_loading": 0.03866073775956831
+      },
+      {
+        "feature": "dst_host_diff_srv_rate",
+        "loading": 0.02235982975088629,
+        "abs_loading": 0.02235982975088629
+      },
+      {
+        "feature": "srv_count",
+        "loading": -0.022265133725752364,
+        "abs_loading": 0.022265133725752364
+      },
+      {
+        "feature": "dst_host_srv_count",
+        "loading": -0.021854606578595545,
+        "abs_loading": 0.021854606578595545
+      },
+      {
+        "feature": "logged_in",
+        "loading": 0.0175394743288928,
+        "abs_loading": 0.0175394743288928
+      }
+    ],
+    "PC4": [
+      {
+        "feature": "dst_host_same_src_port_rate",
+        "loading": 0.4531075630070051,
+        "abs_loading": 0.4531075630070051
+      },
+      {
+        "feature": "hot",
+        "loading": -0.40765512352053207,
+        "abs_loading": 0.40765512352053207
+      },
+      {
+        "feature": "is_guest_login",
+        "loading": -0.40608485662587124,
+        "abs_loading": 0.40608485662587124
+      },
+      {
+        "feature": "dst_host_srv_diff_host_rate",
+        "loading": 0.4042663866226692,
+        "abs_loading": 0.4042663866226692
+      },
+      {
+        "feature": "srv_diff_host_rate",
+        "loading": 0.2823244718241933,
+        "abs_loading": 0.2823244718241933
+      },
+      {
+        "feature": "logged_in",
+        "loading": -0.2707864163996245,
+        "abs_loading": 0.2707864163996245
+      },
+      {
+        "feature": "dst_host_count",
+        "loading": -0.1722324264205796,
+        "abs_loading": 0.1722324264205796
+      },
+      {
+        "feature": "protocol_type_tcp",
+        "loading": -0.12973004734315657,
+        "abs_loading": 0.12973004734315657
+      },
+      {
+        "feature": "srv_count",
+        "loading": 0.12440658832575535,
+        "abs_loading": 0.12440658832575535
+      },
+      {
+        "feature": "dst_host_srv_count",
+        "loading": -0.12146120261869449,
+        "abs_loading": 0.12146120261869449
+      }
+    ],
+    "PC5": [
+      {
+        "feature": "is_guest_login",
+        "loading": 0.4701447112066749,
+        "abs_loading": 0.4701447112066749
+      },
+      {
+        "feature": "hot",
+        "loading": 0.46521314169844824,
+        "abs_loading": 0.46521314169844824
+      },
+      {
+        "feature": "dst_host_srv_diff_host_rate",
+        "loading": 0.3072463493117098,
+        "abs_loading": 0.3072463493117098
+      },
+      {
+        "feature": "srv_count",
+        "loading": -0.30242109908182846,
+        "abs_loading": 0.30242109908182846
+      },
+      {
+        "feature": "dst_host_same_src_port_rate",
+        "loading": 0.2614386616676235,
+        "abs_loading": 0.2614386616676235
+      },
+      {
+        "feature": "dst_host_srv_count",
+        "loading": -0.2586534208987237,
+        "abs_loading": 0.2586534208987237
+      },
+      {
+        "feature": "dst_host_count",
+        "loading": -0.23835605512972088,
+        "abs_loading": 0.23835605512972088
+      },
+      {
+        "feature": "count",
+        "loading": -0.228253923546202,
+        "abs_loading": 0.228253923546202
+      },
+      {
+        "feature": "srv_diff_host_rate",
+        "loading": 0.2134111445611662,
+        "abs_loading": 0.2134111445611662
+      },
+      {
+        "feature": "dst_host_diff_srv_rate",
+        "loading": 0.13986059806112036,
+        "abs_loading": 0.13986059806112036
+      }
+    ],
+    "PC6": [
+      {
+        "feature": "srv_count",
+        "loading": 0.5568656011909832,
+        "abs_loading": 0.5568656011909832
+      },
+      {
+        "feature": "count",
+        "loading": 0.31153711208548757,
+        "abs_loading": 0.31153711208548757
+      },
+      {
+        "feature": "is_guest_login",
+        "loading": 0.2702571225094802,
+        "abs_loading": 0.2702571225094802
+      },
+      {
+        "feature": "hot",
+        "loading": 0.26701090150925827,
+        "abs_loading": 0.26701090150925827
+      },
+      {
+        "feature": "dst_host_count",
+        "loading": 0.23536879470446168,
+        "abs_loading": 0.23536879470446168
+      },
+      {
+        "feature": "dst_host_same_src_port_rate",
+        "loading": 0.22936128987712434,
+        "abs_loading": 0.22936128987712434
+      },
+      {
+        "feature": "logged_in",
+        "loading": -0.21469928274088113,
+        "abs_loading": 0.21469928274088113
+      },
+      {
+        "feature": "protocol_type_tcp",
+        "loading": -0.1864793542505555,
+        "abs_loading": 0.1864793542505555
+      },
+      {
+        "feature": "wrong_fragment",
+        "loading": 0.16171817867333801,
+        "abs_loading": 0.16171817867333801
+      },
+      {
+        "feature": "dst_host_diff_srv_rate",
+        "loading": 0.15804684697087817,
+        "abs_loading": 0.15804684697087817
+      }
+    ],
+    "PC7": [
+      {
+        "feature": "dst_host_diff_srv_rate",
+        "loading": 0.40860732048355863,
+        "abs_loading": 0.40860732048355863
+      },
+      {
+        "feature": "duration",
+        "loading": 0.40854138606181084,
+        "abs_loading": 0.40854138606181084
+      },
+      {
+        "feature": "dst_host_srv_diff_host_rate",
+        "loading": -0.27978830849912156,
+        "abs_loading": 0.27978830849912156
+      },
+      {
+        "feature": "diff_srv_rate",
+        "loading": 0.27603040476430657,
+        "abs_loading": 0.27603040476430657
+      },
+      {
+        "feature": "srv_count",
+        "loading": -0.2656562012105342,
+        "abs_loading": 0.2656562012105342
+      },
+      {
+        "feature": "count",
+        "loading": -0.25085119066947964,
+        "abs_loading": 0.25085119066947964
+      },
+      {
+        "feature": "srv_diff_host_rate",
+        "loading": -0.18923837762630055,
+        "abs_loading": 0.18923837762630055
+      },
+      {
+        "feature": "dst_bytes",
+        "loading": 0.1772434947819152,
+        "abs_loading": 0.1772434947819152
+      },
+      {
+        "feature": "hot",
+        "loading": -0.16973506858384305,
+        "abs_loading": 0.16973506858384305
+      },
+      {
+        "feature": "is_guest_login",
+        "loading": -0.1644382945142568,
+        "abs_loading": 0.1644382945142568
+      }
+    ],
+    "PC8": [
+      {
+        "feature": "duration",
+        "loading": 0.5206313568356894,
+        "abs_loading": 0.5206313568356894
+      },
+      {
+        "feature": "diff_srv_rate",
+        "loading": -0.5114333129828132,
+        "abs_loading": 0.5114333129828132
+      },
+      {
+        "feature": "dst_bytes",
+        "loading": 0.47678405294526816,
+        "abs_loading": 0.47678405294526816
+      },
+      {
+        "feature": "num_file_creations",
+        "loading": 0.2610380830990397,
+        "abs_loading": 0.2610380830990397
+      },
+      {
+        "feature": "dst_host_diff_srv_rate",
+        "loading": -0.24135949805290466,
+        "abs_loading": 0.24135949805290466
+      },
+      {
+        "feature": "srv_count",
+        "loading": 0.12138930752241292,
+        "abs_loading": 0.12138930752241292
+      },
+      {
+        "feature": "wrong_fragment",
+        "loading": -0.11361827573486141,
+        "abs_loading": 0.11361827573486141
+      },
+      {
+        "feature": "same_srv_rate",
+        "loading": 0.09259587992446361,
+        "abs_loading": 0.09259587992446361
+      },
+      {
+        "feature": "rerror_rate",
+        "loading": 0.0807261988826778,
+        "abs_loading": 0.0807261988826778
+      },
+      {
+        "feature": "srv_rerror_rate",
+        "loading": 0.07727122839537315,
+        "abs_loading": 0.07727122839537315
+      }
+    ]
+  },
+  "leakage_policy": "fit on training split only"
+}
